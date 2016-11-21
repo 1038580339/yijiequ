@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>管理中心 - 管理员设置 </title>
+    <meta http-equiv="Content-Type" content="text/html; charset=gb2312"/>
+    <script src="js/common.js"></script>
+    <link href="styles/general.css" rel="stylesheet" type="text/css"/>
+    <link href="styles/main.css" rel="stylesheet" type="text/css"/>
+    <script src="js/jquery-3.1.0.js"></script>
+</head>
+<body>
+<h1>
+<span class="action-span">
+<a href="power.html">返回列表</a>
+</span>
+    <span class="action-span1"><a href="main.html">管理中心</a>  - 管理员设置 - 编辑管理员 </span>
+    <div style="clear:both"></div>
+</h1>
+<div class="form-div">
+    <form action="?acts=search" name="searchForm" method="get">
+        <input type="hidden" name="acts" value="search"/>
+        <input type="hidden" name="pagesizes" value=""/>
+        <img src="images/icon_search.gif" width="26" height="22" border="0" alt="SEARCH"/>
+        标题
+        <input type="text" name="keyword" value="" size="15"/>
+        <input type="submit" value=" 搜索 " class="button"/>
+    </form>
+</div>
+<form action="?act=edits" method="post" name="listForm" id="listForm">
+    <input type="hidden" id="id" name="id" value="23"/>
+    <input type="hidden" id="page" name="page" value="1"/>
+    <input type="hidden" id="keyword" name="keyword" value=""/>
+    <input type="hidden" id="acts" name="acts" value=""/>
+    <div class="list-div" id="div">
+        <table width="100%" cellspacing="1" cellpadding="2" id="list-table">
+            <tr>
+                <th colspan="2" align="left">编辑管理员</th>
+            </tr>
+            <tr>
+                <td align=right>账号：</td>
+                <td><input name="username" type="text" class="input" id="username" value="yangjingzhe"/>
+                    <input name="pass1" type="hidden" id="pass1" value="e10adc3949ba59abbe56e057f20f883e"/></td>
+            </tr>
+            <tr>
+                <td align=right>密码：</td>
+                <td><input name="password" type="text" class="input" id="password"/>
+                    为空则不修改
+                </td>
+            </tr>
+            <tr>
+                <td align=right>等级：</td>
+                <td><select name="rights" id="rights">
+                    <option value="2" selected>超级管理员</option>
+                    <option value="1">招聘管理</option>
+                    <option value="3">合作伙伴管理</option>
+                    <option value="4">新单幻管理</option>
+                    <option value="7">小区管理加盟管理</option>
+                </select></td>
+            </tr>
+
+            <tr>
+                <td>&nbsp;</td>
+                <td><input name="Submit3" type="submit" class="button" value="提交"/>
+                    　
+                    <input name="Submit22" type="reset" class="button" value="重置"/></td>
+            </tr>
+        </table>
+    </div>
+</form>
+<div id="footer">
+    版权所有 &copy; 20010-2012 <a href="#" target="_blank">企业网站系统</a>，并保留所有权利。
+</div>
+</body>
+</html>
